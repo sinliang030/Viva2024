@@ -2,9 +2,7 @@ package vivaq3;
 import java.util.Scanner;
 
 public class VivaQ3 {
-
     public static void main(String[] args) {
-
         Scanner k=new Scanner(System.in);
         int deg1=k.nextInt();
         int deg2=k.nextInt();
@@ -18,25 +16,22 @@ public class VivaQ3 {
             //identify for types of triangle
             if((deg1==deg2)&&(deg1==deg3)&&(deg2==deg3)){
                 System.out.println("It is an equilateral triangle.");
-                
             }
-            
             else if((deg1!=deg2)&&(deg1!=deg3)&&(deg2!=deg3)){
                 System.out.println("It is an scalene triangle.");
             }
-                if (deg1==90||deg2==90||deg3==90){
-                    System.out.println("It is a right-angled triangle.");
-                }
             else if ((deg1 == deg2 && deg1 != deg3) || 
-                    (deg1 == deg3 && deg1 != deg2) ||
-                    (deg2 == deg3 && deg3 != deg1) ||    
-                    (deg2 == deg3 && deg2 != deg1)) {
-                        System.out.println("It is an isosceles triangle.");
-                        
-                if (deg1==90||deg2==90||deg3==90){
-                    System.out.println("It is a right-angled triangle.");
+                     (deg1 == deg3 && deg1 != deg2) ||
+                     (deg2 == deg3 && deg3 != deg1) ||    
+                     (deg2 == deg3 && deg2 != deg1)) {
+                    System.out.println("It is an isosceles triangle.");
+                        }
+            
+            //Identify for right-angled triangle
+            if (deg1==90||deg2==90||deg3==90){
+                System.out.println("It is a right-angled triangle.");
                     }        
-            }
+            
         }else{
            System.out.println("The triangle is not valid.");
         }
